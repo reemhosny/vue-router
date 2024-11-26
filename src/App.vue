@@ -1,12 +1,9 @@
 <script setup>
-import Home from '../src/views/Home.vue';
+import TheNavigation from '@/components/TheNavigation.vue';
 </script>
 
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link>
-    <router-link to="/brazil">Brazil</router-link>
-  </div>
+  <TheNavigation />
   <div class="container">
     <RouterView />
   </div>
