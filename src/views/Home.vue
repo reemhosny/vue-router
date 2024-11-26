@@ -9,7 +9,10 @@ import sourceData from '@/data.json';
       <router-link
         v-for="destination in sourceData.destinations"
         :key="destination.id"
-        :to="destination.slug"
+        :to="{
+          name: 'destination.show',
+          params: { id: destination.id, slug: destination.slug },
+        }"
       >
         <h2>{{ destination.name }}</h2>
         <img :src="`/images/${destination.image}`" :alt="destination.name" />
